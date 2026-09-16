@@ -1,4 +1,5 @@
 import type { Ticket } from '../types/ticket';
+import { PriorityBadge } from './PriorityBadge';
 
 type TicketListProps = {
     tickets: Ticket[];
@@ -23,7 +24,7 @@ export function TicketList({ tickets }: TicketListProps) {
                         <td>{ticket.subject}</td>
                         <td>{ticket.customer}</td>
                         <td>{ticket.status}</td>
-                        <td>{ticket.priority === 'Urgent' ? <span style={{ color: 'red' }}>{ticket.priority}</span> : ticket.priority}</td>
+                        <td><PriorityBadge priority={ticket.priority} /></td>
                     </tr>
                 ))}
             </tbody>

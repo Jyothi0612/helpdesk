@@ -1,14 +1,12 @@
-//Import the tickets and TicketList into App.tsx and render the table.
-
-import tickets from './data/tickets';
-import { TicketList } from './components/TicketList';
-import Header from './components/Header';
+import { tickets } from "./data/tickets";
+import { Header } from "./components/Header";
+import { TicketList } from "./components/TicketList";
 
 function App() {
 
   return (
     <>
-      <Header />
+      <Header title="HelpDesk"  ticketCount={tickets.length}/>
       <TicketList tickets={tickets} />
     </>
   )

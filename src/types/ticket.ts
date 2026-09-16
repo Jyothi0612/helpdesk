@@ -1,5 +1,5 @@
-export type TicketStatus = "open" | "in_progress" | "closed";
-export type TicketPriority = "Low" | "Medium" | "High" | "Urgent";
+export type TicketStatus = "open" | "in_progress" | "resolved";
+export type TicketPriority = "low" | "medium" | "high" | "urgent";
 
 export type Ticket = {
     id: string;
@@ -7,4 +7,5 @@ export type Ticket = {
     customer: string;
     status: TicketStatus;
     priority: TicketPriority;
+    createdAt: string;
 }
