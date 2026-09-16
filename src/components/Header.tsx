@@ -1,11 +1,13 @@
-import tickets from '../data/tickets'
+type HeaderProps = {
+  title: string;
+  ticketCount: number;
+};
 
-function Header() {
-    return (
-        <header>
-            <h1>HelpDesk . {tickets.length} tickets</h1>
-        </header>
-    )
+export function Header({ title, ticketCount }: HeaderProps) {
+  return (
+    <header>
+      <h1>{title}</h1>
+      <p>{ticketCount} tickets</p>
+    </header>
+  );
 }
-
-export default Header
