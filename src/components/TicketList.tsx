@@ -6,6 +6,10 @@ type TicketListProps = {
 };
 
 export function TicketList({ tickets }: TicketListProps) {
+  if (tickets.length === 0) {
+    return <p role="status">No tickets match your filters.</p>;
+  }
+
   return (
     <table>
       <thead>
